@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>子ども向けサイト</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; background: #f9f9ff; }
-    h1 { color: #ff6f6f; }
-    .card { margin: 20px auto; padding: 20px; width: 80%; max-width: 400px; background: white; border-radius: 20px; box-shadow: 0 0 10px #ccc; }
-  </style>
+<meta charset="UTF-8">
+<title>伊能忠敬ってどんな人？</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 20px; background: #f6f6f6; }
+  h1 { text-align: center; margin-bottom: 10px; }
+  p.center { text-align: center; }
+  .menu {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 15px; margin-top: 30px;
+  }
+  .btn {
+    display: block; text-decoration: none; color: #333;
+    background: white; padding: 15px 20px;
+    border-radius: 10px; box-shadow: 0 0 5px #ccc;
+    width: 220px; text-align: center; font-size: 16px;
+  }
+  .btn:hover { background: #e9e9e9; }
+</style>
 </head>
+
 <body>
-  <h1>ようこそ！こどもサイトへ</h1>
-  <div class="card">
-    <p>ここは、やさしい言葉で説明するサイトだよ！</p>
+  <h1>伊能忠敬ってどんな人？</h1>
+  <p class="center">日本地図をつくった、すごい人を紹介するページだよ。</p>
+
+  <div class="menu">
+    <a class="btn" href="profile.html">プロフィール</a>
+    <a class="btn" href="method.html">測量の方法</a>
+    <a class="btn" href="map.html">日本地図のすごさ</a>
+    <a class="btn" href="inozu.html">伊能図とは？</a>
+    <a class="btn" href="travel.html">測量の旅</a>
+    <a class="btn" href="timeline.html">年表</a>
+    <a class="btn" href="quiz.html">クイズ</a>
   </div>
 </body>
 </html>
-
