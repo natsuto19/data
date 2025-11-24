@@ -11,7 +11,16 @@
 <body>
 
     <!-- 外部読み込みメニュー -->
-    <header id="menu"></header>
+<div id="menu-placeholder"></div>
+
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('メニュー読み込みエラー:', error));
+</script>
 
     <div class="container">
 
@@ -22,14 +31,6 @@
             クイズでも遊べるよ！
         </p>
 
-        <div style="margin-top:30px;">
-
-            <a href="playground/index.html" class="button">言葉遊びデータベースへ</a>
-            <br><br>
-
-            <a href="quiz/index.html" class="button">クイズを遊ぶ</a>
-
-        </div>
 
         <div class="card">
             <h2>更新履歴</h2>
