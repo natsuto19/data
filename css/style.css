@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
     background: #ffffff;
     color: #333333;
     line-height: 1.7;
@@ -12,27 +12,62 @@ body {
 .container {
     width: 90%;
     max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* ------------- ヘッダー / メニュー ------------- */
-header {
-    background: #0b4f3f;
-    color: #fff;
-    padding: 15px 20px;
+/* ------------- 見出し装飾 ------------- */
+h1, h2, h3 {
+    color: #0b4f3f;
+    border-left: 6px solid #0b4f3f;
+    padding-left: 10px;
+}
+
+h1 {
     text-align: center;
 }
 
-nav a {
-    color: #ffffff;
-    margin: 0 10px;
+/* ------------- メニュー ------------- */
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #e9f1ed;
+}
+
+.main-menu > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #0b3d2e;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #e5f0ec;
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #e9f1ed;
+    min-width: 150px;
+    border: 1px solid #0b3d2e;
+}
+
+.submenu li {
+    display: block;
+}
+
+.main-menu li:hover > .submenu {
+    display: block;
 }
 
 /* ------------- ボタン ------------- */
@@ -54,17 +89,62 @@ nav a:hover {
 /* ------------- カード表示 ------------- */
 .card {
     background: #ffffff;
-    border: 2px solid #0b4f3f;
+    border: 2px solid #0b3d2e;
     border-radius: 10px;
-    padding: 15px 20px;
+    padding: 20px;
     margin: 20px 0;
 }
 
-/* ------------- 見出し装飾 ------------- */
-h1, h2, h3 {
-    color: #0b4f3f;
+.card a {
+    color: #0b3d2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ------------- 概要 ------------- */
+.overview {
+    background: #e9f1ed;
     border-left: 6px solid #0b4f3f;
-    padding-left: 10px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+/* ------------- ページ下部リンク ------------- */
+.link-section {
+    margin-top: 40px;
+}
+
+.link-section a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    color: #0b3d2e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* ------------- フッター ------------- */
+.site-footer {
+    background: #0b3d2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+.site-footer a:hover {
+    color: #cde2d1;
 }
 
 /* ------------- フォーム類 ------------- */
@@ -79,193 +159,4 @@ input[type="text"], select {
 input[type="text"]:focus {
     outline: none;
     border-color: #146b55;
-}
-
-.main-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: #e9f1ed;
-}
-
-.main-menu > ul > li {
-  display: inline-block;
-  position: relative;
-}
-
-.main-menu a {
-  display: block;
-  padding: 10px 15px;
-  color: #0b3d2e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.main-menu a:hover {
-  text-decoration: underline;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #e9f1ed;
-  min-width: 150px;
-  border: 1px solid #0b3d2e;
-}
-
-.submenu li {
-  display: block;
-}
-
-.main-menu li:hover > .submenu {
-  display: block;
-}
-
-.site-footer {
-  background: #0b3d2e;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-}
-
-.site-footer a {
-  color: #ffffff;
-  text-decoration: underline;
-  margin: 0 5px;
-}
-
-.site-footer a:hover {
-  color: #cde2d1;
-}
-
-
-/* style.css */
-
-/* 全体設定 */
-body {
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  background: #ffffff;
-  color: #0b3d2e;
-  margin: 0;
-  padding: 0;
-}
-
-/* メニュー用 */
-.main-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: #e9f1ed;
-}
-
-.main-menu > ul > li {
-  display: inline-block;
-  position: relative;
-}
-
-.main-menu a {
-  display: block;
-  padding: 10px 15px;
-  color: #0b3d2e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.main-menu a:hover {
-  text-decoration: underline;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #e9f1ed;
-  min-width: 150px;
-  border: 1px solid #0b3d2e;
-}
-
-.submenu li {
-  display: block;
-}
-
-.main-menu li:hover > .submenu {
-  display: block;
-}
-
-/* コンテナ・カード */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-h1, h2 {
-  color: #0b4f3f;
-}
-
-h1 {
-  text-align: center;
-}
-
-.overview {
-  background: #e9f1ed;
-  border-left: 6px solid #0b4f3f;
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-}
-
-.card {
-  border: 2px solid #0b3d2e;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background: #ffffff;
-}
-
-.card a {
-  color: #0b3d2e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-/* ページ下部リンク */
-.link-section {
-  margin-top: 40px;
-}
-
-.link-section a {
-  display: inline-block;
-  margin-right: 15px;
-  margin-bottom: 10px;
-  color: #0b3d2e;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-/* フッター */
-.site-footer {
-  background: #0b3d2e;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-}
-
-.site-footer a {
-  color: #ffffff;
-  text-decoration: underline;
-  margin: 0 5px;
-}
-
-.site-footer a:hover {
-  color: #cde2d1;
 }
