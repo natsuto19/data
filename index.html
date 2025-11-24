@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>伊能忠敬ってどんな人？</title>
-<style>
-  body { font-family: sans-serif; margin: 0; padding: 20px; background: #f6f6f6; }
-  h1 { text-align: center; margin-bottom: 10px; }
-  p.center { text-align: center; }
-  .menu {
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 15px; margin-top: 30px;
-  }
-  .btn {
-    display: block; text-decoration: none; color: #333;
-    background: white; padding: 15px 20px;
-    border-radius: 10px; box-shadow: 0 0 5px #ccc;
-    width: 220px; text-align: center; font-size: 16px;
-  }
-  .btn:hover { background: #e9e9e9; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>言葉遊びデータベース</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
-  <h1>伊能忠敬ってどんな人？</h1>
-  <p class="center">日本地図をつくった、すごい人を紹介するページだよ。</p>
 
-  <div class="menu">
-    <a class="btn" href="profile.html">プロフィール</a>
-    <a class="btn" href="method.html">測量の方法</a>
-    <a class="btn" href="map.html">日本地図のすごさ</a>
-    <a class="btn" href="inozu.html">伊能図とは？</a>
-    <a class="btn" href="travel.html">測量の旅</a>
-    <a class="btn" href="timeline.html">年表</a>
-    <a class="btn" href="quiz.html">クイズ</a>
-  </div>
+    <!-- 外部読み込みメニュー -->
+    <header id="menu"></header>
+
+    <div class="container">
+
+        <h1>言葉遊びデータベース</h1>
+        <p>
+            「倒語」「左右対称の漢字」「どこでも切れる単語」「一文字の動物」など、  
+            さまざまな“言葉遊び”を収録したサイトです。  
+            クイズでも遊べるよ！
+        </p>
+
+        <div style="margin-top:30px;">
+
+            <a href="playground/index.html" class="button">言葉遊びデータベースへ</a>
+            <br><br>
+
+            <a href="quiz/index.html" class="button">クイズを遊ぶ</a>
+
+        </div>
+
+        <div class="card">
+            <h2>更新履歴</h2>
+            <ul>
+                <li>2025/xx/xx　サイト公開</li>
+            </ul>
+        </div>
+
+    </div>
+
 </body>
 </html>
