@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>言葉遊びデータベース</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/menu.js" defer></script>
+</head>
+
+<body>
+    <!-- 外部メニュー読み込み -->
+    <header id="menu"></header>
+
+    <div class="container">
+
+        <h1>言葉遊びデータベース</h1>
+        <p>検索バーやカテゴリを使って、好きな言葉遊びを探してみよう。</p>
+
+        <!-- 🔍 検索フォーム -->
+        <div class="card">
+            <h2>検索</h2>
+
+            <label>キーワード</label>
+            <input type="text" id="searchInput" placeholder="例：ねこ / 左右対称 / ぎなた読み" />
+
+            <label style="margin-top:10px; display:block;">カテゴリ</label>
+            <select id="categorySelect">
+                <option value="all">すべて</option>
+                <option value="倒語">倒語（ぎなた読み）</option>
+                <option value="左右対称">左右対称の漢字</option>
+                <option value="どこでも切れる">どこでも切れる単語</option>
+                <option value="一文字動物">一文字の動物</option>
+            </select>
+
+            <button class="button" style="margin-top:15px;" onclick="searchWords()">検索する</button>
+        </div>
+
+        <!-- 🔎 結果表示 -->
+        <div id="results" class="card">
+            <h2>検索結果</h2>
+            <p>検索するとここに表示されます。</p>
+        </div>
+
+    </div>
+
+    <script>
+        let wordsData = [];
+
+        // データ読み込み
+        fetch("data.json")
+            .then(res => res.json())
+            .then(data => {
+                wordsData = data;
+            });
+
+        function searchWords() {
+            const keyword = document.getElementById("searchInput").value.trim();
+            const category = document.getElementById("categorySelect").value;
+
+            let filtered = wordsData;
+
+            if (category !== "all") {
+                filtered = filtered.filter(item => item.category === category);
+            }
+
+            if (keyword !== "") {
+                filtered = filtered.filter(item =>
+                    item.word.includes(keyword) || item.note.includes(keyword)
+                );
+            }
+
+            displayResults(filtered);
+        }
+
+        function displayResults(list) {
+            const results = document.getElementById("results");
+
+            if (list.length === 0) {
+                results.innerHTML = `
+                    <h2>検索結果</h2>
+                    <p>該当する項目がありません。</p>
+                `;
+                return;
+            }
+
+            let html = `<h2>検索結果 (${list.length}件)</h2>`;
+
+            list.forEach(item => {
+                html += `
+                    <div class="card" style="border-color:#146b55; margin-bottom:15px;">
+                        <h3>${item.word}</h3>
+                        <p><strong>カテゴリ：</strong>${item.category}</p>
+                        <p>${item.note}</p>
+                    </div>
+                `;
+            });
+
+            results.innerHTML = html;
+        }
+    </script>
+
+</body>
+</html>
