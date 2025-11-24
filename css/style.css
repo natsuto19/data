@@ -122,3 +122,21 @@ input[type="text"]:focus {
 .main-menu li:hover > .submenu {
   display: block;
 }
+
+.site-footer {
+  background: #0b3d2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.site-footer a:hover {
+  color: #cde2d1;
+}
