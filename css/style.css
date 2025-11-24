@@ -1,0 +1,82 @@
+/* ------------- 基本 ------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* ------------- レイアウト ------------- */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ------------- ヘッダー / メニュー ------------- */
+header {
+    background: #0b4f3f;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e5f0ec;
+}
+
+/* ------------- ボタン ------------- */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0b4f3f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #146b55;
+}
+
+/* ------------- カード表示 ------------- */
+.card {
+    background: #ffffff;
+    border: 2px solid #0b4f3f;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+/* ------------- 見出し装飾 ------------- */
+h1, h2, h3 {
+    color: #0b4f3f;
+    border-left: 6px solid #0b4f3f;
+    padding-left: 10px;
+}
+
+/* ------------- フォーム類 ------------- */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0b4f3f;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #146b55;
+}
