@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>言葉遊びポータル</title>
+  <style>
+    body {
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: #ffffff;
+      color: #0b3d2e;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* メニューは外部ファイルで読み込み */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      color: #0b4f3f;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .overview {
+      background: #e9f1ed;
+      border-left: 6px solid #0b4f3f;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .card {
+      border: 2px solid #0b3d2e;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #ffffff;
+    }
+
+    .card a {
+      color: #0b3d2e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .link-section {
+      margin-top: 40px;
+    }
+
+    .link-section a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      color: #0b3d2e;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 外部メニュー読み込み -->
+  <div id="menu-placeholder"></div>
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('メニュー読み込みエラー:', error));
+  </script>
+
+  <div class="container">
+    <h1>言葉遊びポータル</h1>
+
+    <!-- 言葉遊び概要 -->
+    <div class="overview">
+      <p>
+        このページでは、日本語のさまざまな言葉遊びを紹介しています。  
+        倒語や左右対称の漢字、どこでも切れる単語、しりとり、言葉遊びクイズなど、  
+        日本語の面白さや遊び心を楽しむためのリンク集です。
+      </p>
+    </div>
+
+    <!-- 記事リンク集 -->
+    <div class="card">
+      <h2>記事リンク集</h2>
+      <ul>
+        <li><a href="tougo.html">倒語一覧 - 逆読みや言葉の入れ替えを楽しもう</a></li>
+        <li><a href="symmetry.html">左右対称の漢字 - 文字の形を遊ぶ</a></li>
+        <li><a href="dokokire.html">どこでも切れる単語 - しりとりや切れ目で遊ぶ</a></li>
+        <li><a href="quiz.html">言葉遊びクイズ - 言葉遊び力を試してみよう</a></li>
+        <!-- 他の記事もここに追加可能 -->
+      </ul>
+    </div>
+
+    <!-- ページ下部リンク（言葉遊びコンテンツへのリンク） -->
+    <div class="link-section">
+      <h2>言葉遊びコンテンツ</h2>
+      <a href="tougo.html">倒語</a>
+      <a href="symmetry.html">左右対称の漢字</a>
+      <a href="dokokire.html">どこでも切れる単語</a>
+      <a href="quiz.html">クイズ</a>
+    </div>
+
+  </div>
+
+  <!-- 外部フッター読み込み -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('フッター読み込みエラー:', error));
+  </script>
+
+</body>
+</html>
