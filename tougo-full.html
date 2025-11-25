@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>倒語・全文表示</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+    <script src="../js/tougo-search.js" defer></script>
+</head>
+<body>
+
+    <!-- メニュー読込 -->
+    <div id="menu"></div>
+
+    <main class="container">
+
+        <h1>倒語 全文表示</h1>
+        <p>全文データを検索したり、文字数でフィルタしたりできます。</p>
+
+        <!-- 🔍検索 UI --------------------------------------------------->
+        <div class="search-area">
+
+            <input type="text" id="searchInput" placeholder="キーワードを検索">
+
+            <div class="filter-buttons">
+                <button data-length="2">2文字</button>
+                <button data-length="3">3文字</button>
+                <button data-length="4">4文字</button>
+                <button data-length="5+">5文字以上</button>
+                <button data-length="all" class="all-btn">すべて表示</button>
+            </div>
+        </div>
+
+        <!-- 結果テーブル --------------------------------------------------->
+        <table class="word-table">
+            <thead>
+                <tr>
+                    <th>表記</th>
+                    <th>倒語</th>
+                    <th>文字数</th>
+                </tr>
+            </thead>
+            <tbody id="wordTableBody">
+                <!-- JSで自動挿入 -->
+            </tbody>
+        </table>
+
+    </main>
+
+    <!-- フッター読込 -->
+    <div id="footer"></div>
+
+</body>
+</html>
