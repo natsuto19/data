@@ -2,123 +2,60 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>倒語</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/menu.js" defer></script>
-</head>
+    <title>倒語（ダイジェスト）</title>
 
+    <!-- 外部CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- メニューとフッター読込用 -->
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+
+    <!-- ダイジェストページ用JS -->
+    <script src="../js/tougo-digest.js" defer></script>
+</head>
 <body>
 
-    <!-- 外部読み込みメニュー -->
-<div id="menu-placeholder"></div>
+    <!-- メニュー -->
+    <div id="menu"></div>
 
-<script>
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('メニュー読み込みエラー:', error));
-</script>
+    <main class="container">
 
-  <div class="container">
-    <h1>倒語一覧</h1>
-    <p class="overview">
-      倒語とは、言葉や文字を逆に読むことで別の意味や言葉になる日本語の言葉遊びです。<br>
-      ここでは文字数ごとに整理して、見やすいテーブルで表示しています。
-    </p>
+        <h1>倒語（ダイジェスト）</h1>
+        <p>
+            ここでは倒語の一部サンプルを紹介しています。<br>
+            全データを見たい場合は <a href="tougo-full.html">全文表示ページ</a> をご覧ください。
+        </p>
 
-    <!-- 5文字以上 -->
-    <h2>５文字以上</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
-      <thead>
-        <tr>
-          <th>元の言葉</th>
-          <th>逆読み</th>
-          <th>意味</th>
-          <th>別読み・解説</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>たいやとごみ</td><td>みごとやいた</td><td>タイヤとごみ</td><td>見事焼いた</td></tr>
-        <tr><td>いいこっか</td><td>かっこいい</td><td>いい国家</td><td>かっこいい</td></tr>
-        <tr><td>いいつくり</td><td>りくついい</td><td>良い作り</td><td>理屈言い</td></tr>
-        <tr><td>いいてんか</td><td>かんていい</td><td>良い天下</td><td>鑑定医</td></tr>
-        <tr><td>かいさいち</td><td>ちいさいか</td><td>開催地</td><td>小さい蚊</td></tr>
-        <!-- 必要に応じて追加 -->
-      </tbody>
-    </table>
+        <!-- セクションごとに表示（短縮版） -->
+        <section>
+            <h2>2文字の倒語</h2>
+            <ul id="list2"></ul>
+        </section>
 
-    <!-- 4文字 -->
-    <h2>４文字</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
-      <thead>
-        <tr>
-          <th>元の言葉</th>
-          <th>逆読み</th>
-          <th>意味</th>
-          <th>別読み・解説</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>いいわか</td><td>かわいい</td><td>良い和歌</td><td>かわいい</td></tr>
-        <tr><td>いかんな</td><td>なんかい</td><td>いかんな</td><td>難解、何回</td></tr>
-        <tr><td>いけんか</td><td>かんけい</td><td>意見か？</td><td>関係</td></tr>
-        <!-- 必要に応じて追加 -->
-      </tbody>
-    </table>
+        <section>
+            <h2>3文字の倒語</h2>
+            <ul id="list3"></ul>
+        </section>
 
-    <!-- 3文字 -->
-    <h2>３文字</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
-      <thead>
-        <tr>
-          <th>元の言葉</th>
-          <th>逆読み</th>
-          <th>意味</th>
-          <th>別読み・解説</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>あにま</td><td>まにあ</td><td>アニマ</td><td>マニア</td></tr>
-        <tr><td>いかだ</td><td>だかい</td><td>筏</td><td>打開</td></tr>
-        <tr><td>いすや</td><td>やすい</td><td>椅子屋</td><td>安い</td></tr>
-        <!-- 必要に応じて追加 -->
-      </tbody>
-    </table>
+        <section>
+            <h2>4文字の倒語</h2>
+            <ul id="list4"></ul>
+        </section>
 
-    <!-- 2文字 -->
-    <h2>２文字</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
-      <thead>
-        <tr>
-          <th>元の言葉</th>
-          <th>逆読み</th>
-          <th>意味</th>
-          <th>別読み・解説</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>いえ</td><td>えい</td><td>家</td><td>エイ</td></tr>
-        <tr><td>いか</td><td>かい</td><td>烏賊</td><td>貝</td></tr>
-        <tr><td>いち</td><td>ちい</td><td>位置</td><td>地位</td></tr>
-        <!-- 必要に応じて追加 -->
-      </tbody>
-    </table>
+        <section>
+            <h2>5文字以上の倒語</h2>
+            <ul id="list5"></ul>
+        </section>
 
-  </div>
+        <p class="more-link">
+            →　<a href="tougo-full.html">全文表示（検索・フィルタ対応）はこちら</a>
+        </p>
 
-  <!-- 外部フッター読み込み -->
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      })
-      .catch(error => console.error('フッター読み込みエラー:', error));
-  </script>
+    </main>
+
+    <!-- フッター -->
+    <div id="footer"></div>
 
 </body>
 </html>
