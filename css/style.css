@@ -160,3 +160,30 @@ input[type="text"]:focus {
     outline: none;
     border-color: #146b55;
 }
+
+.search-area {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 6px 10px;
+}
+
+.word-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.word-table th,
+.word-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
